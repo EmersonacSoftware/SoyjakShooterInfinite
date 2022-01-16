@@ -19,7 +19,7 @@ export default class Stage extends StageBase {
       })
     ];
 
-    this.sounds = [new Sound("bgm_space", "./bgm_space.mp3")];
+    this.sounds = [new Sound("bgm_space", "./Stage/sounds/bgm_space.mp3")];
 
     this.triggers = [
       new Trigger(Trigger.GREEN_FLAG, this.whenGreenFlagClicked)
