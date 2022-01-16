@@ -19,7 +19,7 @@ export default class Stage extends StageBase {
       })
     ];
 
-    this.sounds = [new Sound("pop", "./Stage/sounds/pop.wav")];
+    this.sounds = [new Sound("bgm_space", "./bgmspace.mp3")];
 
     this.triggers = [
       new Trigger(Trigger.GREEN_FLAG, this.whenGreenFlagClicked)
@@ -35,6 +35,12 @@ export default class Stage extends StageBase {
     while (true) {
       yield* this.wait(this.random(1, 3));
       this.sprites["ArloStan"].createClone();
+      yield;
+    }
+    
+    *whenGreenFlagClicked() {
+    while (true) {
+      yield* this.playSoundUntilDone("bgm_space");
       yield;
     }
   }
