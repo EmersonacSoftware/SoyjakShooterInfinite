@@ -38,10 +38,6 @@ export default class Stage extends StageBase {
       yield;
     }
     
-    *whenGreenFlagClicked() {
-    while (true) {
-      yield* this.playSoundUntilDone("bgm_space");
-      yield;
-    }
+    
   }
 }
